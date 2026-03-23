@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda protectors</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    
+    
+
+
+<header>
+    <h1>Beskyt pandaerne!</h1>
+</header>
+
+
+<nav>
+    <a href="index.html">Hjem</a>
+    <a href="om_os.html">Om os</a>
+    <a href="indsamlingen.html">Støt indsamlingen</a>
+    <a href="kontakt.html">Kontakt os</a>
+</nav>
+
+
+<main>
+    <h2>Pandaer – en nøgleart i verdens natur</h2><br><br>
+    <p>Den kæmpestore panda (Ailuropoda melanoleuca) er et af verdens mest genkendelige pattedyr og spiller en central rolle i sit økosystem. Pandaen lever hovedsageligt i de bjergrige bambusskove i Kina, hvor dens overlevelse er tæt forbundet med bevarelsen af naturlige levesteder.<br><br>
+Selvom målrettede bevaringsindsatser har bidraget til en positiv udvikling i pandaens bestand, er arten fortsat afhængig af menneskelig opbakning.<br><br>
+Tab af levesteder og klimaforandringer udgør stadig alvorlige trusler.<br><br>
+På denne hjemmeside kan du støtte arbejdet med at beskytte pandaer og deres naturlige omgivelser.<br><br>
+Gennem støtte bidrager du direkte til naturbevarelse, forskning og langsigtede løsninger, der sikrer pandaens overlevelse for fremtidige generationer.<br> <br>
+Vi vil hjælpe pandaerne, og vi har brug for din hjælp til det.<br> <br>
+
+Kig rundt i vores side og find ud af hvordan DU hjælper til at sikre overlevelsen af pandaer.</p>
+</main>
+
+
+<footer>
+    © 2026 • Beskyt pandaerne!
+</footer>
+<!-- Cookie boks -->
+<div id="cookie-box">
+    <p>Vi bruger cookies til at forbedre din oplevelse. Ved at fortsætte accepterer du brugen af cookies.</p>
+    <button id="accept-cookies">Accepter</button>
+</div>
+
+
+<script src="script.js" ></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBox = document.getElementById("cookie-box");
+    const acceptBtn = document.getElementById("accept-cookies");
+
+
+    if (!cookieBox || !acceptBtn) return; // sikkerhedscheck
+
+
+    // Tjek om der allerede er accepteret cookies
+    const accepted = localStorage.getItem("cookiesAccepted");
+
+
+    if (!accepted) {
+        cookieBox.style.display = "block"; // Vis boksen
+    }
+
+
+    // Når brugeren klikker "Accepter"
+    acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", "true"); // Gem valg
+        cookieBox.style.display = "none"; // Skjul boksen
+    });
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>

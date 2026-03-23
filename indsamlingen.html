@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda protectors</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+    </style>
+</head>
+
+
+<body>
+
+
+<header>
+    <h1>Beskyt pandaerne!</h1>
+</header>
+
+
+<nav>
+    <a href="index.html">Hjem</a>
+    <a href="om_os.html">Om os</a>
+    <a href="indsamlingen.html">Støt indsamlingen</a>
+    <a href="kontakt.html">Kontakt os</a>
+</nav>
+
+
+<main>
+    <h2>Hjælp med en donation</h2><br><br>
+    <p>Doner til WWF via MobilePay 66135, for at støtte pandaerne.</p>
+</main>
+
+
+<footer>
+    © 2026 • Beskyt pandaerne!
+</footer>
+<!-- Cookie boks -->
+<div id="cookie-box">
+    <p>Vi bruger cookies til at forbedre din oplevelse. Ved at fortsætte accepterer du brugen af cookies.</p>
+    <button id="accept-cookies">Accepter</button>
+</div>
+
+
+<script src="script.js" ></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBox = document.getElementById("cookie-box");
+    const acceptBtn = document.getElementById("accept-cookies");
+
+
+    if (!cookieBox || !acceptBtn) return; // sikkerhedscheck
+
+
+    // Tjek om der allerede er accepteret cookies
+    const accepted = localStorage.getItem("cookiesAccepted");
+
+
+    if (!accepted) {
+        cookieBox.style.display = "block"; // Vis boksen
+    }
+
+
+    // Når brugeren klikker "Accepter"
+    acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", "true"); // Gem valg
+        cookieBox.style.display = "none"; // Skjul boksen
+    });
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>

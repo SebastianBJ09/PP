@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda protectors</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    
+    
+
+
+<header>
+    <h1>Beskyt pandaerne!</h1>
+</header>
+
+
+<nav>
+    <a href="index.html">Hjem</a>
+    <a href="om_os.html">Om os</a>
+    <a href="indsamlingen.html">Støt indsamlingen</a>
+    <a href="kontakt.html">Kontakt os</a>
+</nav>
+
+
+<main>
+    <h2>Hvem er vi?</h2><br><br>
+    <p>Vi er Pandaprotectors.
+     En non-benefit organisation som vil redde pandaen! Vores fokus er på de truede Togeskove.<br><br>
+Pandaen er et meget territorielt dyr og har brug for meget plads (cirka et område på 10km^2).<br><br>
+Den bor i de truede togeskove som der ikke er så meget tilbage af. Udover pandaen bor der tusinder af andre dyrearter i skoven som også er i fare for at forsvinde.<br><br>
+Men man kan stadig gøre noget!<br><br>
+Pandaprotectors vil plante nye træer i tågeskovenes område i håbet om at hjælpe tilgroningen. <br><br>
+Men det koster penge og derfor har vi brug for dig! Du kan hjælpe os ved at give et lille tilskud og til gengæld planter vi træer for de penge vi får.<br><br></p>
+</main>
+
+
+<footer>
+    © 2026 • Beskyt pandaerne!
+</footer>
+<!-- Cookie boks -->
+<div id="cookie-box">
+    <p>Vi bruger cookies til at forbedre din oplevelse. Ved at fortsætte accepterer du brugen af cookies.</p>
+    <button id="accept-cookies">Accepter</button>
+</div>
+
+
+<script src="script.js" ></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBox = document.getElementById("cookie-box");
+    const acceptBtn = document.getElementById("accept-cookies");
+
+
+    if (!cookieBox || !acceptBtn) return; // sikkerhedscheck
+
+
+    // Tjek om der allerede er accepteret cookies
+    const accepted = localStorage.getItem("cookiesAccepted");
+
+
+    if (!accepted) {
+        cookieBox.style.display = "block"; // Vis boksen
+    }
+
+
+    // Når brugeren klikker "Accepter"
+    acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", "true"); // Gem valg
+        cookieBox.style.display = "none"; // Skjul boksen
+    });
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>
